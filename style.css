@@ -2,8 +2,17 @@ body {
   background-color: lightblue;
 }
 
+@font-face {
+  font-family: 'MyComicSans';
+  src: url('/fonts/ComicSans.woff2') format('woff2'),
+       url('/fonts/ComicSans.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 h1 {
   font-weight: bold;
   text-align: center;
-  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-family: "MyComicSans", cursive;
 }
