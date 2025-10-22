@@ -1,3 +1,9 @@
 body {
-  background-color: blue;
+  background-color: lightblue;
+}
+
+h1 {
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  text-align: center;
 }
