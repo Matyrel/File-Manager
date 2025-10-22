@@ -5,8 +5,198 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Rock, Paper, Scissors Game</title>
   <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+  <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
 </head>
 <body>
   <h1>Rock, Paper, Scissors Game</h1>
+  <py-script>
+    import random
+import sys
+import time
+import os
+
+usrscore = 0
+npcscore = 0
+
+def text():
+    print("Rock!")
+    time.sleep(.2)
+    print("Paper!")
+    time.sleep(.2)
+    print("Scissors!")
+    time.sleep(.2)
+    print("Shoot!")
+    time.sleep(.2)
+
+
+def rps():
+    global npcscore
+    global usrscore
+    if npcscore == 2 or usrscore == 2:
+        stop()
+    else:
+        randnum = random.randint(1, 3)
+        if randnum == 1:
+            npcinput = "rock"
+        elif randnum == 2:
+            npcinput = "paper"
+        elif randnum == 3:
+            npcinput = "scissors"
+        else:
+            print("SYNTAX ERROR -- CONTACT MAX")
+            print("EMAIL EEVEEFANM@GMAIL.COM")
+            print("OR MALKIN.MAX@ICLOUD.COM")
+            print("TEXT OR CALL (408) 905-9395")
+            sys.exit()
+        originput = input("Input choice >>> ")
+        usrinput = originput.lower()
+        if usrinput == "rock":
+            text()
+            if npcinput == "paper":
+                print("Opponent chose paper! You lose!")
+                npcscore += 1
+                print("Current scores:")
+                print(f"You: {usrscore} Opponent: {npcscore}")
+                time.sleep(.2)
+            elif npcinput == "scissors":
+                print("Opponent chose scissors! You win!")
+                usrscore += 1
+                print("Current scores:")
+                print(f"You: {usrscore} Opponent: {npcscore}")
+                time.sleep(.2)
+            elif npcinput == "rock":
+                print("Opponent also chose rock! It is a tie!")
+                print("Current scores:")
+                print(f"You: {usrscore} Opponent: {npcscore}")
+                time.sleep(.2)
+        elif usrinput == "paper":
+            text()
+            if npcinput == "scissors":
+                print("Opponent chose scissors! You lose!")
+                npcscore += 1
+                print("Current scores:")
+                print(f"You: {usrscore} Opponent: {npcscore}")
+                time.sleep(.2)
+            elif npcinput == "rock":
+                print("Opponent chose rock! You win!")
+                usrscore += 1
+                print("Current scores:")
+                print(f"You: {usrscore} Opponent: {npcscore}")
+                time.sleep(.2)
+            elif npcinput == "paper":
+                print("Opponent also chose paper! It is a tie!")
+                print("Current scores:")
+                print(f"You: {usrscore} Opponent: {npcscore}")
+                time.sleep(.2)
+        elif usrinput == "scissors":
+            text()
+            if npcinput == "rock":
+                print("Opponent chose rock! You lose!")
+                npcscore += 1
+                print("Current scores:")
+                print(f"You: {usrscore} Opponent: {npcscore}")
+                time.sleep(.2)
+            elif npcinput == "paper":
+                print("Opponent chose paper! You win!")
+                usrscore += 1
+                print("Current scores:")
+                print(f"You: {usrscore} Opponent: {npcscore}")
+                time.sleep(.2)
+            elif npcinput == "scissors":
+                print("Opponent also chose scissors! It is a tie!")
+                print("Current scores:")
+                print(f"You: {usrscore} Opponent: {npcscore}")
+                time.sleep(.2)
+        else:
+            print("INVALID -- TRY AGAIN!")
+            time.sleep(1)
+            rps()
+
+def stop():
+    print("The game has finished!")
+    if npcscore > usrscore:
+        print("The opponent has won!")
+    elif npcscore < usrscore:
+        print("You have won!")
+    print(f"Final scores: You: {usrscore} Opponent: {npcscore}")
+    usrinput = input("Play again? (y/n) >>> ")
+    usrinput = usrinput.lower()
+    if usrinput == "y":
+        if os.name == "nt":
+            os.system("cls")
+            sys.stdout.flush()
+            sys.stderr.flush()
+    
+            # Replace the current process with a new one running the same script
+            os.execv(sys.executable, ['python'] + sys.argv)
+        else:
+            os.system("clear")
+            sys.stdout.flush()
+            sys.stderr.flush()
+    
+            # Replace the current process with a new one running the same script
+            os.execv(sys.executable, ['python'] + sys.argv)
+    elif usrinput == "n":
+        print("Thanks for playing!")
+        sys.exit()
+    else:
+        print("INVALID -- TRY AGAIN!")
+        stop()
+        
+
+
+
+if __name__ == "__main__":
+    os.system("cls" if os.name == "nt" else "clear")
+    print("Loading")
+    time.sleep(1)
+    os.system("cls" if os.name == "nt" else "clear")
+    print("Loading.")
+    time.sleep(1)
+    os.system("cls" if os.name == "nt" else "clear")
+    print("Loading..")
+    time.sleep(1)
+    os.system("cls" if os.name == "nt" else "clear")
+    print("Loading...")
+    time.sleep(1)
+    os.system("cls" if os.name == "nt" else "clear")
+    print("Loading")
+    time.sleep(1)
+    os.system("cls" if os.name == "nt" else "clear")
+    print("Loading.")
+    time.sleep(1)
+    os.system("cls" if os.name == "nt" else "clear")
+    print("Loading..")
+    time.sleep(1)
+    os.system("cls" if os.name == "nt" else "clear")
+    print("Loading...")
+    time.sleep(1)
+    os.system("cls" if os.name == "nt" else "clear")
+    print("Loading")
+    time.sleep(1)
+    os.system("cls" if os.name == "nt" else "clear")
+    print("Loading.")
+    time.sleep(1)
+    os.system("cls" if os.name == "nt" else "clear")
+    print("Loading..")
+    time.sleep(1)
+    os.system("cls" if os.name == "nt" else "clear")
+    print("Loading...")
+    time.sleep(1)
+    os.system("cls" if os.name == "nt" else "clear")
+    print("Please input the passcode to continue:")
+    passcode = input("Passcode >>> ")
+    if passcode != "3249":
+        print("INCORRECT PASSCODE -- CONTACT MAX FOR ACCESS TO THE GAME")
+        sys.exit()
+    elif passcode == "3249":
+        os.system("cls" if os.name == "nt" else "clear")
+        print("Welcome to Rock, Paper, Scissors!")
+        print("First to 2 points wins!")
+        print("Type 'rock', 'paper', or 'scissors' to play.")
+        while True:
+            rps()
+  </py-script>
 </body>
 </html>
