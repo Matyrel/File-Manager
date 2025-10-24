@@ -1,1 +1,3 @@
-Rock Paper Scissors game
+# Python file manager
+
+## Introduction
