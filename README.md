@@ -10,4 +10,12 @@ Follow the steps below to get set up.
 1. Navigate to the [file manager download page](https://github.com/Matyrel/matyrel.github.io/blob/main/Filemanager.py).
 2. Click on the three dots in the corner.
 3. Click "Download".
-4. 
+
+## Step Two: Run the file
+1. Press CMD+space.
+2. Type "terminal" and press enter.
+3. In the window that pops up, type "cd downloads", and press enter.
+4. Next, type "Filemanager.py", and press enter.
+5. Click "Allow", if a confirmation window pops up.
+6. Enter the file manager password (1234).
+7. You're all set!
