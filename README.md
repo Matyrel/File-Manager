@@ -7,3 +7,7 @@ This file manager comes equipped with many different features: password protecti
 Follow the steps below to get set up.
 
 ## Step One: Download the file
+1. Navigate to the [file manager download page](https://github.com/Matyrel/matyrel.github.io/blob/main/Filemanager.py).
+2. Click on the three dots in the corner.
+3. Click "Download".
+4. 
